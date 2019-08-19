@@ -5,4 +5,5 @@
 
 sudo chown "$USER":"$USER" /home/"$USER"/.docker -R
 sudo chmod g+rwx "/home/$USER/.docker" -R
+sudo usermod -aG docker $USER
 ```
