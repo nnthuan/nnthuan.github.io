@@ -15,5 +15,11 @@ Ideally, each service should have only a small set of responsibilities. [Single 
 - [Command Query Responsibility Segregation (CQRS) pattern](https://microservices.io/patterns/data/cqrs.html)
 
 
+## Properties
+- Database per service
+  - Private-tables-per-service – each service owns a set of tables that must only be accessed by that service
+  - Schema-per-service – each service has a database schema that’s private to that service
+  - Database-server-per-service – each service has it’s own database server.
+
 ## References
 - https://microservices.io/patterns/microservices.html
