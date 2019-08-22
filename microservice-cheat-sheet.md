@@ -24,6 +24,8 @@ Ideally, each service should have only a small set of responsibilities. [Single 
   - Private-tables-per-service – each service owns a set of tables that must only be accessed by that service
   - Schema-per-service – each service has a database schema that’s private to that service
   - Database-server-per-service – each service has it’s own database server.
+  
+ - The [API Gateway pattern](https://microservices.io/patterns/apigateway.html) defines how clients access the services in a microservice architecture.
 
 ## References
 - https://microservices.io/patterns/microservices.html
