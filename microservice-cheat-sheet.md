@@ -30,8 +30,8 @@ Ideally, each service should have only a small set of responsibilities. [Single 
  - [Single Service per Host](https://microservices.io/patterns/deployment/single-service-per-host.html), [Multiple Services per Host](https://microservices.io/patterns/deployment/multiple-services-per-host.html), [Service Instance per Container pattern](https://microservices.io/patterns/deployment/service-per-container.html), [Serverless deployment pattern](https://microservices.io/patterns/deployment/serverless-deployment.html)
  
  - Cross-cutting concerns patterns
-  - [Microservice chassis pattern](https://microservices.io/patterns/microservice-chassis.html)
-  - [Externalized configuration](https://microservices.io/patterns/externalized-configuration.html)
+   - [Microservice chassis pattern](https://microservices.io/patterns/microservice-chassis.html)
+   - [Externalized configuration](https://microservices.io/patterns/externalized-configuration.html)
 
 ## References
 - https://microservices.io/patterns/microservices.html
