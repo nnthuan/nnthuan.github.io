@@ -9,4 +9,4 @@ sudo lsof -i -P -n | grep LISTEN
 
 # Kill a process with PID
 kill PID
-``
+```
