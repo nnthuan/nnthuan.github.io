@@ -25,13 +25,28 @@ Ideally, each service should have only a small set of responsibilities. [Single 
   - Schema-per-service – each service has a database schema that’s private to that service
   - Database-server-per-service – each service has it’s own database server.
   
- - The [API Gateway pattern](https://microservices.io/patterns/apigateway.html) defines how clients access the services in a microservice architecture.
+- The [API Gateway pattern](https://microservices.io/patterns/apigateway.html) defines how clients access the services in a microservice architecture.
  
- - [Single Service per Host](https://microservices.io/patterns/deployment/single-service-per-host.html), [Multiple Services per Host](https://microservices.io/patterns/deployment/multiple-services-per-host.html), [Service Instance per Container pattern](https://microservices.io/patterns/deployment/service-per-container.html), [Serverless deployment pattern](https://microservices.io/patterns/deployment/serverless-deployment.html)
+- [Single Service per Host](https://microservices.io/patterns/deployment/single-service-per-host.html), [Multiple Services per Host](https://microservices.io/patterns/deployment/multiple-services-per-host.html), [Service Instance per Container pattern](https://microservices.io/patterns/deployment/service-per-container.html), [Serverless deployment pattern](https://microservices.io/patterns/deployment/serverless-deployment.html)
  
- - Cross-cutting concerns patterns
-   - [Microservice chassis pattern](https://microservices.io/patterns/microservice-chassis.html)
-   - [Externalized configuration](https://microservices.io/patterns/externalized-configuration.html)
+- Cross-cutting concerns patterns
+  - [Microservice chassis pattern](https://microservices.io/patterns/microservice-chassis.html)
+  - [Externalized configuration](https://microservices.io/patterns/externalized-configuration.html)
+  
+- [Access Token](https://microservices.io/patterns/security/access-token.html)
+
+- Observability patterns
+  - [Log aggregation](https://microservices.io/patterns/observability/application-logging.html)
+  - [Application metrics](https://microservices.io/patterns/observability/application-logging.html)
+  - [Audit logging](https://microservices.io/patterns/observability/audit-logging.html)
+  - [Distributed tracing](https://microservices.io/patterns/observability/distributed-tracing.html)
+  - [Exception tracking](https://microservices.io/patterns/observability/exception-tracking.html)
+  - [Health check API](https://microservices.io/patterns/observability/health-check-api.html)
+  - [Log deployments and changes](https://microservices.io/patterns/observability/log-deployments-and-changes.html)
+  
+ - UI patterns
+  - [Server-side page fragment composition](https://microservices.io/patterns/ui/server-side-page-fragment-composition.html)
+  - [Client-side UI composition](https://microservices.io/patterns/ui/client-side-ui-composition.html)
 
 ## References
 - https://microservices.io/patterns/microservices.html
