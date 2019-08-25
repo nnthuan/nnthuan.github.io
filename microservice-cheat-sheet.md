@@ -44,7 +44,7 @@ Ideally, each service should have only a small set of responsibilities. [Single 
   - [Health check API](https://microservices.io/patterns/observability/health-check-api.html)
   - [Log deployments and changes](https://microservices.io/patterns/observability/log-deployments-and-changes.html)
   
- - UI patterns
+- UI patterns
   - [Server-side page fragment composition](https://microservices.io/patterns/ui/server-side-page-fragment-composition.html)
   - [Client-side UI composition](https://microservices.io/patterns/ui/client-side-ui-composition.html)
 
