@@ -17,10 +17,12 @@ const renderTopicOnPageHeader = async () => {
         err.topicList = topicList;
         throw err;
      }
+    
+     const pageHeader = document.getElementsByClassName("page-header");
   
      for(const topic of topicList)
      {
-        console.log(renderTopicButton(topic));
+       pageHeader.appendChild(renderTopicButton(topic));
      }
   }
   catch(err)
@@ -32,7 +34,5 @@ const renderTopicOnPageHeader = async () => {
 const main = async () => {
   await renderTopicOnPageHeader();
 }
-
-var pageHeader = document.getElementsByClassName("page-header");
 
 main();
