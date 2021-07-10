@@ -23,7 +23,6 @@ class Component {
 class TopicItem extends Component {
   content = "";
   url = "";
-  /**@type {HTMLAnchorElement} */
   node = null;
 
   constructor(data = { content: "", url: "" }) {
