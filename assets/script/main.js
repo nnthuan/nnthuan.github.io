@@ -43,15 +43,13 @@ class HeaderTopicItemList extends Component {
   }
 
   async render() {
-    let topicList;
+    let topicList = [];
 
     try {
       let { data } = await axios.get(Path.join('/data', location.pathname, "topic-list.json"));
       topicList = data;
     }
     catch (err) {
-      debugger;
-      console.log(err);
       if (err.response.status !== 404) {
         console.error("Get topic list not success", err);
         return;
@@ -62,6 +60,10 @@ class HeaderTopicItemList extends Component {
       let err = new Error("topicList not is an array");
       err.topicList = topicList;
       throw err;
+    }
+
+    if (topicList.length === 0) {
+      return;
     }
 
     const [pageHeader] = document.getElementsByClassName("page-header");
