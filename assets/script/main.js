@@ -8,7 +8,7 @@ const renderTopicOnPageHeader = async () => {
   {
      let { data: topicList } = await axios.get("/data/topic-list.json");
      
-     if(!Array.isArray(topicList)
+     if(!Array.isArray(topicList))
      {
         let err =  new Error("topicList not is an array");
         err.topicList = topicList;
