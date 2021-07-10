@@ -50,6 +50,8 @@ class HeaderTopicItemList extends Component {
       topicList = data;
     }
     catch (err) {
+      debugger;
+      console.log(err);
       if (err.response.status !== 404) {
         console.error("Get topic list not success", err);
         return;
