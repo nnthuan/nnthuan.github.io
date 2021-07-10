@@ -1,17 +1,3 @@
 theme: jekyll-theme-cayman
 title: nnthuan.github.io
 description: For All
-show_downloads: false
-google_analytics: true
-github.is_project_page: true
-github.repository_url: https://github.com/nnthuan
-toc:
-  min_level: 1
-  max_level: 6
-  ordered_list: false
-  no_toc_section_class: no_toc_section
-  list_id: toc
-  list_class: section-nav
-  sublist_class: ''
-  item_class: toc-entry
-  item_prefix: toc-
