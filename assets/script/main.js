@@ -1,8 +1,24 @@
+const renderTopicButton = (topic) => {
+  let button = document.createElement("a", { className: "btn", content: topic.content, href: topic.url });\
+  return button;
+}
+
 const renderTopicOnPageHeader = async () => {
   try
   {
-     let { data } = await axios.get("/data/topic-list.json");
-     console.log(Object.keys(data[0]));
+     let { data: topicList } = await axios.get("/data/topic-list.json");
+     
+     if(!Array.isArray(topicList)
+     {
+        let err =  new Error("topicList not is an array");
+        err.topicList = topicList;
+        throw err;
+     }
+  
+     for(const topic of topicList)
+     {
+        console.log(renderTopicButton);
+     }
   }
   catch(err)
   {
