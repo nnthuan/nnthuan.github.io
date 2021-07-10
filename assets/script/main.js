@@ -1,7 +1,7 @@
 const renderTopicButton = (topic) => {
   let button = document.createElement("a");
   button.className = "btn";
-  button.content = topic.content;
+  button.innerHTML = topic.content;
   button.href = topic.url;
   return button;
 }
