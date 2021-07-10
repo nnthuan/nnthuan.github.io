@@ -44,24 +44,27 @@ class HeaderTopicItemList extends Component {
   }
 
   async render() {
+    let topicList;
+
     try {
-      let { data: topicList } = await axios.get(Path.join('/data', location.pathname, "topic-list.json"));
-
-      if (!Array.isArray(topicList)) {
-        let err = new Error("topicList not is an array");
-        err.topicList = topicList;
-        throw err;
-      }
-
-      const [pageHeader] = document.getElementsByClassName("page-header");
-
-      for (const topic of topicList) {
-        let topicItem = new TopicItem(topic);
-        pageHeader.appendChild(topicItem.node);
-      }
+      let { data } = await axios.get(Path.join('/data', location.pathname, "topic-list.json"));
+      topicList = data;
     }
     catch (err) {
       console.error("Get topic list not success", err);
+    }
+
+    if (!Array.isArray(topicList)) {
+      let err = new Error("topicList not is an array");
+      err.topicList = topicList;
+      throw err;
+    }
+
+    const [pageHeader] = document.getElementsByClassName("page-header");
+
+    for (const topic of topicList) {
+      let topicItem = new TopicItem(topic);
+      pageHeader.appendChild(topicItem.node);
     }
   }
 }
