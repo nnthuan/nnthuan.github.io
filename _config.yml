@@ -1,7 +1,11 @@
 title: nnthuan.github.io
 description: For All
+
 show_downloads: false
+
 google_analytics: true
+
 github.is_project_page: true
-repository_url: https://github.com/nnthuan
+github.repository_url: https://github.com/nnthuan
+
 theme: jekyll-theme-cayman
