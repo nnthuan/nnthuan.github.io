@@ -23,6 +23,7 @@ class Component {
 class TopicItem extends Component {
   content = "";
   url = "";
+  /**@type {HTMLAnchorElement} */
   node = null;
 
   constructor(data = { content: "", url: "" }) {
@@ -63,6 +64,7 @@ class HeaderTopicItemList extends Component {
 
     for (const topic of topicList) {
       let topicItem = new TopicItem(topic);
+      console.log(topicItem.node)
       pageHeader.appendChild(topicItem.node);
     }
   }
