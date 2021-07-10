@@ -18,7 +18,7 @@ const renderTopicOnPageHeader = async () => {
         throw err;
      }
     
-     const pageHeader = document.getElementsByClassName("page-header");
+     const [ pageHeader ] = document.getElementsByClassName("page-header");
   
      for(const topic of topicList)
      {
