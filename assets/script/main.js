@@ -70,7 +70,7 @@ class HeaderTopicItemList extends Component {
 class Main {
 
   static async render() {
-    await (new HeaderTopicItemList()).render().then(console.error);
+    await (new HeaderTopicItemList()).render().catch(console.error);
   }
 
 }
