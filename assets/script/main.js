@@ -2,6 +2,7 @@ class Path {
   static join(...parts) {
     const separator = '/';
     let replace = new RegExp(separator + '{1,}', 'g');
+
     return parts.join(separator).replace(replace, separator);
   }
 }
@@ -49,7 +50,10 @@ class HeaderTopicItemList extends Component {
       topicList = data;
     }
     catch (err) {
-      console.error("Get topic list not success", err);
+      if (err.response.status !== 404) {
+        console.error("Get topic list not success", err);
+        return;
+      }
     }
 
     if (!Array.isArray(topicList)) {
@@ -68,11 +72,9 @@ class HeaderTopicItemList extends Component {
 }
 
 class Main {
-
   static async render() {
     await (new HeaderTopicItemList()).render().catch(console.error);
   }
-
 }
 
 Main.render();
