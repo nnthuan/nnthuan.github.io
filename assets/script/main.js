@@ -17,7 +17,7 @@ const renderTopicOnPageHeader = async () => {
   
      for(const topic of topicList)
      {
-        console.log(renderTopicButton);
+        console.log(renderTopicButton(topic));
      }
   }
   catch(err)
