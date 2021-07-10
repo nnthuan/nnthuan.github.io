@@ -1,7 +1,7 @@
 const renderTopicOnPageHeader = async () => {
   try
   {
-     let { data } = await axios.get("https://raw.githubusercontent.com/nnthuan/nnthuan.github.io/main/data/topic-list.json");
+     let { data } = await axios.get("/data/topic-list.json");
      console.log(data);
   }
   catch(err)
