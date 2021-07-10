@@ -1,5 +1,3 @@
 ---
-layout: default
+layout: index
 ---
-
-<a href="/linux" class="btn">linux</a>
