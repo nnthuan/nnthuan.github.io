@@ -15,3 +15,5 @@ const main = async () => {
 }
 
 var pageHeader = document.getElementsByClassName("page-header");
+
+main();
