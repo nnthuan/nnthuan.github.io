@@ -1,6 +1,6 @@
 title: nnthuan.github.io
 description: For All
 show_downloads: true
-google_analytics:
-is_project_page: true
+google_analytics: true
+github.is_project_page: true
 theme: jekyll-theme-cayman
