@@ -1,29 +1,32 @@
-//#region DataObject
-const TopicItemDataObject = {
-  contnet: "",
-  url: "",
-};
-//#endregion
+class Path {
+  static join(...parts) {
+    const separator = '/';
+    let replace = new RegExp(separator + '{1,}', 'g');
+    return parts.join(separator).replace(replace, separator);
+  }
+}
 
-//#region Component
 class Component {
   /**@type {Node} */
   node = null;
-  constructor(data) {
+
+  constructor(data = {}) {
     Object.assign(this, data);
     this.create();
   }
 
-  create() {
-    throw new Error("Method not implemented");
-  }
+  create() { }
+
+  render() { }
 }
 
 class TopicItem extends Component {
   content = "";
   url = "";
+  /**@type {HTMLAnchorElement} */
+  node = null;
 
-  constructor(data = TopicItemDataObject) {
+  constructor(data = { content: "", url: "" }) {
     super(data);
   }
 
@@ -35,32 +38,40 @@ class TopicItem extends Component {
   }
 }
 
-//#endregion
-
-const renderTopicOnPageHeader = async () => {
-  try {
-    let { data: topicList } = await axios.get("/data/topic-list.json");
-
-    if (!Array.isArray(topicList)) {
-      let err = new Error("topicList not is an array");
-      err.topicList = topicList;
-      throw err;
-    }
-
-    const [pageHeader] = document.getElementsByClassName("page-header");
-
-    for (const topic of topicList) {
-      let topicItem = new TopicItem(topic);
-      pageHeader.appendChild(topicItem.node);
-    }
+class HeaderTopicItemList extends Component {
+  constructor(data = {}) {
+    super(data);
   }
-  catch (err) {
-    console.error("Get topic list not success", err);
+
+  async render() {
+    try {
+      let { data: topicList } = await axios.get(Path.join('/data', location.pathname, "topic-list.json"));
+
+      if (!Array.isArray(topicList)) {
+        let err = new Error("topicList not is an array");
+        err.topicList = topicList;
+        throw err;
+      }
+
+      const [pageHeader] = document.getElementsByClassName("page-header");
+
+      for (const topic of topicList) {
+        let topicItem = new TopicItem(topic);
+        pageHeader.appendChild(topicItem.node);
+      }
+    }
+    catch (err) {
+      console.error("Get topic list not success", err);
+    }
   }
 }
 
-const main = async () => {
-  await renderTopicOnPageHeader();
+class Main {
+
+  static async render() {
+    await (new HeaderTopicItemList()).render().then(console.error);
+  }
+
 }
 
-main();
+Main.render();
