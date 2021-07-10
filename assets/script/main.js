@@ -1,5 +1,5 @@
 const renderTopicButton = (topic) => {
-  let button = document.createElement("a", { className: "btn", content: topic.content, href: topic.url });\
+  let button = document.createElement("a", { className: "btn", content: topic.content, href: topic.url });
   return button;
 }
 
