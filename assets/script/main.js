@@ -1,2 +1,3 @@
 var pageHeader = document.getElementsByClassName("page-header");
-console.log(pageHeader);
+axios.get("https://raw.githubusercontent.com/nnthuan/nnthuan.github.io/main/data/topic-list.json")
+.resolve(topicList => console.log(topicList));
