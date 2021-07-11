@@ -1,9 +1,7 @@
 ---
 layout: default
 title: Linux
-description:
+description: ""
 ---
-
-## Linux
 
 [back](../) | [home](/)

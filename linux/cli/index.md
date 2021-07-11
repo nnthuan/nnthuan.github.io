@@ -1,9 +1,7 @@
 ---
 layout: default
 title: CLI
-description:
+description: ""
 ---
-
-## CLI
 
 [back](../) | [home](/)
