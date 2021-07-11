@@ -16,4 +16,4 @@ sudo lsof -i -P -n | grep LISTEN
 kill PID
 ```
 
-[back](../) | [home](/)
+[back](/linux/cli) | [home](/)
