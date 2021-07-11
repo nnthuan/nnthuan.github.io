@@ -1,7 +1,9 @@
 ---
 layout: default
 title: Use Case
-description: Use case
+description: "This document provides command lines use cases in Linux.
+Use your browser's search engine to find what you need. You can use the keyboard shortcut Ctrl + F.
+"
 ---
 
 ## Find the process running on the port and kill
@@ -13,3 +15,5 @@ sudo lsof -i -P -n | grep LISTEN
 # Kill a process with PID
 kill PID
 ```
+
+[back](../) | [home](/)
