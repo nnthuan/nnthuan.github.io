@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Use Case
-description: "This document provides command-line use cases when you develop, code, DevOps, ... on a Linux environment.\n
+description: "This document provides command-line use cases when you develop, code, DevOps, ... on a Linux environment.<br/>
 Use your browser's search engine to find what you need. You can use the keyboard shortcut Ctrl + F.
 "
 ---
@@ -16,4 +16,4 @@ sudo lsof -i -P -n | grep LISTEN
 kill PID
 ```
 
-[back](/linux/cli) | [home](/)
+[back](../../) | [home](/)
