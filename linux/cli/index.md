@@ -6,4 +6,4 @@ description:
 
 ## CLI
 
-[back](../) | [home][/]
+[back](../) | [home](/)

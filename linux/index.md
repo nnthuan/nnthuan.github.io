@@ -6,4 +6,4 @@ description:
 
 ## Linux
 
-[back](../) | [home][/]
+[back](../) | [home](/)
