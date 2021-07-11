@@ -16,8 +16,4 @@ sudo lsof -i -P -n | grep LISTEN
 kill PID
 ```
 
-<<<<<<< HEAD
 [back](./) | [home](/)
-=======
-[back](../../) | [home](/)
->>>>>>> 9496a4db34ebd122dbdbedf27dd776f3c488d53d
