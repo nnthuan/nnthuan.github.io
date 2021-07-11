@@ -44,9 +44,24 @@ class HeaderTopicItemList extends Component {
 
   async render() {
     let topicList = [];
+    let path = Path.join(location.pathname).trim();
+
+    if (path === "/" || path === "") {
+      path = Path.join(path, "data.json");
+    }
+    else {
+      const paths = path.split("/");
+      let prefix = paths[paths.length - 1];
+
+      if (prefix.trim() === "") {
+        prefix = paths[paths.length - 2];
+      }
+
+      path = Path.join(path, prefix + "-data.json");
+    }
 
     try {
-      let { data } = await axios.get(Path.join('/data', location.pathname, "topic-list.json"));
+      let { data } = await axios.get(path);
       topicList = data;
     }
     catch (err) {
