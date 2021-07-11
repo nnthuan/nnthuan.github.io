@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Linux
+title: CLI
 description:
 ---
 
-## Linux
+## CLI
 
 [back](../) | [home][/]
