@@ -62,7 +62,7 @@ class HeaderTopicItemList extends Component {
 
     try {
       let { data } = await axios.get(path);
-      topicList = data;
+      topicList = data.topicList;
     }
     catch (err) {
       if (err.response.status !== 404) {
