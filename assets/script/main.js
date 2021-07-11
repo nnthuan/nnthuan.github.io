@@ -45,19 +45,19 @@ class HeaderTopicItemList extends Component {
   async render() {
     let topicList = [];
     let path = Path.join(location.pathname).trim();
+    const paths = path.split("/");
 
-    if (path === "/" || path === "") {
+    if (
+      path === "/" || path === "" ||
+      path === "/index" || path === "/index.html" ||
+      paths[paths.length - 1] === "/" || paths[paths.length - 1] === "" ||
+      paths[paths.length - 1] === "/index" || paths[paths.length - 1] === "index.html"
+    ) {
       path = Path.join(path, "data.json");
     }
     else {
-      const paths = path.split("/");
       let prefix = paths[paths.length - 1];
-
-      if (prefix.trim() === "") {
-        prefix = paths[paths.length - 2];
-      }
-
-      path = Path.join(path, prefix + "-data.json");
+      path = Path.join(path.replace(prefix, ""), prefix + "-data.json");
     }
 
     try {
