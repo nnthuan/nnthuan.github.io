@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Use Case
-description: "This document provides command-line use cases when you develop, code, DevOps, ... on a Linux environment"
+description: "This document provides command-line use cases when you develop, code, DevOps, ... on a Linux environment."
 ---
 
 ## Find the process running on the port and kill it
