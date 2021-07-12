@@ -81,11 +81,11 @@ class HeaderTopicItemList extends Component {
       return;
     }
 
-    const [pageHeader] = document.getElementsByClassName("page-header");
+    const topicListElement = document.getElementById("topicList");
 
     for (const topic of topicList) {
       let topicItem = new TopicItem(topic);
-      pageHeader.appendChild(topicItem.node);
+      topicListElement.appendChild(topicItem.node);
     }
   }
 }
