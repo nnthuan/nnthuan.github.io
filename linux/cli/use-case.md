@@ -16,4 +16,10 @@ sudo lsof -i -P -n | grep LISTEN
 kill PID
 ```
 
+## Generate a random password
+
+```bash
+openssl rand -base64 15
+```
+
 [back](./) | [home](/)
