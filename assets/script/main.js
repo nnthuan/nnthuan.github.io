@@ -37,7 +37,7 @@ class TopicItem extends Component {
   }
 }
 
-class HeaderTopicItemList extends Component {
+class TopicItemList extends Component {
   constructor(data = {}) {
     super(data);
   }
@@ -92,7 +92,7 @@ class HeaderTopicItemList extends Component {
 
 class Main {
   static async render() {
-    await (new HeaderTopicItemList()).render().catch(console.error);
+    await (new TopicItemList()).render().catch(console.error);
   }
 }
 
